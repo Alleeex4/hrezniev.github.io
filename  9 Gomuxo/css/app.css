@@ -1,0 +1,889 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: -block;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner- {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  vertical-align: top;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ========================================================================/style.scc */
+body {
+  width: 100%;
+  font-family: Argue DEMO;
+  font-family: "Albert Sans", sans-serif;
+  background: #eef1fb;
+}
+.container {
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+}
+section {
+  padding-top: 150px;
+}
+
+.section--build {
+  background-color: #f4f5fc;
+}
+.section--product {
+  padding-bottom: 100px;
+}
+.section--caroucel {
+  background: url(/imageweb/backroll.png), #f4f5fc;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 150px;
+
+  padding: 200px 2% 100px;
+}
+button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  color: #000000;
+  padding: 18px 43px;
+
+  border-radius: 6px;
+  background-color: transparent;
+
+  position: relative;
+  z-index: 1000;
+}
+button:hover {
+  text-decoration: underline;
+  border: none;
+}
+
+.button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background-color: #a69b00;
+  transform-origin: left;
+  transform: scalex(0);
+  transition: transform 1s ease-in;
+}
+.button::before:hover {
+  transform: scalex(1);
+  opacity: 1;
+}
+
+button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #000b51;
+  opacity: 0.5;
+  z-index: 0;
+  transform: scale(1.05);
+
+  border-radius: 6px;
+  transition: transform 0.2s ease-in;
+}
+button:hover::after {
+  transform: scale(1);
+
+  opacity: 1;
+}
+
+.btn--orange {
+  background-color: #f65606;
+
+  color: white;
+}
+.btn--orange::after {
+  border: 5px solid #f65606;
+  opacity: 1;
+}
+
+/* ========================================================================/header */
+.header {
+  font-family: "Albert Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 35px;
+  position: relative;
+}
+.header::after {
+  content: "";
+  width: 1400px;
+  left: 100px;
+  position: absolute;
+  height: 1px;
+  background-color: #dee1e9;
+  bottom: -30px;
+}
+
+.nav__item {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000000;
+  position: relative;
+  right: -200px;
+}
+
+.nav__item a {
+  color: inherit;
+  margin-right: 82px;
+  position: relative;
+}
+.nav__item a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  transform-origin: right;
+  transform: scale(0);
+  transition: transform 0.5s linear;
+  background-color: rgb(255, 88, 66);
+  position: absolute;
+}
+.nav__item a:hover::after {
+  transform: scale(1);
+}
+.nav__item a::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -8px;
+  transform-origin: left;
+  transform: scale(0);
+  transition: transform 0.5s linear;
+  background-color: rgb(0, 2, 73);
+  position: absolute;
+}
+.nav__item a:hover::before {
+  transform: scale(1);
+}
+
+/* ========================================================================/main */
+main {
+  width: 100%;
+  background: url(/imageweb/backroll.png), url(/imageweb/backroll2.png);
+  background-repeat: no-repeat;
+  background-position-x: center, right;
+  background-position-y: 150px, 350px;
+}
+.main__title {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.main__tit {
+  width: 45%;
+  font-family: "Argue DEMO";
+
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 1.2;
+
+  color: #1a1d30;
+}
+.title__img {
+  display: flex;
+  align-items: flex-end;
+}
+.title__photo {
+  position: relative;
+  right: -50px;
+  background-color: #1a1d30;
+  border-radius: 50%;
+}
+.title__photo2 {
+  z-index: 10;
+  transition: transform 0.2s linear;
+}
+
+.title__photo2:hover {
+  border-radius: 50%;
+  transform: scale(1.1);
+}
+.main__girl {
+  width: 70%;
+  display: flex;
+  margin-left: 90px;
+  justify-content: center;
+  margin-top: 100px;
+}
+.main__btn {
+  display: flex;
+  margin-top: 100px;
+}
+.btn__item {
+  margin-left: 30px;
+}
+.btn__item:first-child {
+  margin-left: 0;
+}
+
+.main__men {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.main__statistic {
+  width: 900px;
+  height: 290px;
+  display: flex;
+  background: #1a1d30;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+.statictic__item:first-child {
+  padding-left: 50px;
+}
+
+.statictic__number {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 99px;
+
+  color: #ffffff;
+}
+.statictic__text {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  width: 250px;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #cccccc;
+}
+.man__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+.main__girlph {
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+}
+.main__girlph::after {
+  content: url(/imageweb/girl22.png);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.5s linear;
+  cursor: pointer;
+  z-index: -10;
+  transform-origin: bottom;
+}
+.main__girlph:hover::after {
+  transform: scale(1.05);
+}
+.man__img::after {
+  content: url(/imageweb/man2.png);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.5s linear;
+  transform-origin: bottom;
+  cursor: pointer;
+  z-index: -10;
+}
+.man__img:hover::after {
+  transform: scale(1.05);
+}
+/* ========================================================================/build */
+
+.build {
+  display: flex;
+}
+
+.build__title {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 66px;
+  width: 533px;
+  color: #1a1d30;
+  margin-left: 100px;
+}
+.build__text {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.4;
+  width: 533px;
+  color: #000000;
+  margin-left: 100px;
+  margin-top: 38px;
+}
+.build__img {
+  margin-top: 91px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  padding-left: 95px;
+}
+.build__img::after {
+  content: url(/imageweb/man33.png);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+  transition: transform 1s linear;
+  transform-origin: bottom;
+}
+.build__img:hover::after {
+  transform: scale(1.1);
+}
+.build__list {
+  margin-left: 150px;
+}
+.list__item {
+  display: block;
+  border-top: 1px solid black;
+  padding-top: 32px;
+  width: 650px;
+  margin-bottom: 54px;
+}
+.list__title {
+  display: flex;
+}
+.list__num {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  margin-right: 42px;
+  color: #f65606;
+}
+.list__num--2 {
+  color: #bf6fe1;
+}
+.list__num--3 {
+  color: #1a1d30;
+}
+
+.list__tit {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  width: 210px;
+  color: #1a1d30;
+}
+.list__tit--double {
+  width: 350px;
+}
+
+.list__text {
+  display: flex;
+  margin-top: 32px;
+  justify-content: space-between;
+}
+.list__explore {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 87px;
+}
+.list__share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: #f65606;
+  cursor: pointer;
+  transition: transform 0.4s linear;
+}
+.list__share:hover {
+  transform: scale(1.1);
+}
+
+.list__share--2 {
+  background-color: #bf6fe1;
+}
+.list__share--3 {
+  background-color: #1a1d30;
+}
+
+/* ========================================================================/aspect */
+
+.aspect__title {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.1;
+  width: 80%;
+  text-align: left;
+  color: #1a1d30;
+}
+
+.aspect__item {
+  display: flex;
+  margin-top: 100px;
+  position: relative;
+}
+
+.aspect__content {
+  margin: 50px 100px;
+}
+.aspect__content2 {
+  display: flex;
+}
+.aspect__block {
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.aspect__text {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  width: 450px;
+  color: #1a1d30;
+  margin-bottom: 52px;
+}
+.aspect__text2 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  max-width: 555px;
+  color: #000000;
+  margin-top: 20px;
+}
+.aspect__list {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 180px;
+  line-height: 198px;
+
+  color: #1a1d30;
+}
+
+.aspect__posttitle {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+
+  color: #1a1d30;
+}
+
+.aspect__img2 {
+  position: absolute;
+  right: 113px;
+  bottom: -155px;
+}
+
+.carou__share {
+  width: 13px;
+  height: 13px;
+}
+.carou__img {
+  width: 514px;
+  height: 581px;
+}
+.carou__text {
+  display: flex;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #1a1d30;
+}
+.carou__text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.carou__title {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  margin: 41px 0;
+  color: #1a1d30;
+}
+
+.owl-carousel {
+  width: 1600px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.slide__one .item {
+  cursor: grab;
+}
+.carou__share {
+  padding: 5px 0 0 15px;
+  cursor: pointer;
+}
+/* ========================================================================/product */
+
+.product__title {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 66px;
+  width: 750px;
+  color: #1a1d30;
+  margin-left: 2%;
+}
+.product {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.product__content {
+  width: 500px;
+  margin-left: -500px;
+  position: relative;
+}
+.product__content .item {
+  cursor: grab;
+}
+.product__content::before {
+  content: url(/imageweb/star.png);
+  position: absolute;
+  left: -400px;
+  top: 100px;
+}
+.product__person {
+  display: flex;
+}
+.product__ph {
+  max-width: 100%;
+}
+.product__name {
+  display: block;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.product__firstname {
+  font-family: "Argue DEMO";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+
+  color: #1a1d30;
+}
+.product__vacancy {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #000000;
+}
+.product__comment {
+  margin-top: 37px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #000000;
+}
+.product__content .owl-carousel {
+  width: 500px;
+}
+.owl-dots button {
+  margin: 50px 0 0 30px;
+}
+.owl-dots button:first-child {
+  margin-left: 0;
+}
+.product__img {
+  position: absolute;
+  right: 200px;
+  bottom: -50px;
+  cursor: pointer;
+}
+.product__img::after {
+  content: url(/imageweb/man44.png);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  z-index: -100;
+  transform-origin: bottom;
+  transition: transform 0.5s linear;
+}
+.product__img:hover::after {
+  transform: scale(1.05);
+}
+.post__title {
+  font-family: inherit;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 20px 0 0 2%;
+  color: #000000;
+}
+
+/* ========================================================================/footer */
+footer {
+  padding-top: 100px;
+
+  background: url(/imageweb/backroll.png), #f4f5fc;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 180px;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 3;
+
+  color: #000000;
+
+  border-bottom: 1px solid gray;
+  padding-bottom: 100px;
+}
+.footer__contact button {
+  display: block;
+  margin-bottom: 20px;
+}
+.footer__catalog p {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.108);
+}
+.footer__postcontent {
+  display: flex;
+  justify-content: space-between;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 2%;
+  color: #000000;
+  padding-bottom: 100px;
+}
+.footer__policy a {
+  margin-right: 44px;
+  color: rgb(48, 48, 48);
+}
+.footer__policy a:hover,
+.footer__social a:hover {
+  text-decoration: underline;
+}
+
+.footer__social a {
+  margin-left: 44px;
+  color: rgb(47, 47, 47);
+}
